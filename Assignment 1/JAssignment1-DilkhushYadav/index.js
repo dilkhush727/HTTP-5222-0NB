@@ -33,7 +33,7 @@ app.use("/admin", adminRoutes);
 
 // Home Route
 app.get("/", (req, res) => {
-    res.send("Portfolio API is running!");
+    res.render("index", { title: "Portfolio - Home" });
 });
 
 // Start Server

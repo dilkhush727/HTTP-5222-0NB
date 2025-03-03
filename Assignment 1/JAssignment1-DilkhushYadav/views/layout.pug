@@ -19,7 +19,7 @@ html
         nav.navbar.navbar-expand-lg  
             .container-fluid
                 // Dashboard link in the navbar
-                a.navbar-brand(href="/admin") Dashboard  
+                a.navbar-brand(href="/") Home  
 
                 // Navbar toggle button for mobile view
                 button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav")  
@@ -28,6 +28,9 @@ html
                 // Navbar links
                 #navbarNav.collapse.navbar-collapse  
                     ul.navbar-nav
+                        li.nav-item
+                            // Link to add a new project
+                            a.nav-link(href="/admin") Dashboard  
                         li.nav-item
                             // Link to add a new project
                             a.nav-link(href="/admin/projects/add") Add Project  

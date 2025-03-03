@@ -16,7 +16,7 @@ dist/
 build/
 
 # Environment variables
-#.env
+.env
 
 # IDE or text editor configurations
 .vscode/

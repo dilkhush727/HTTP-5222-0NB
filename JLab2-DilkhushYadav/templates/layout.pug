@@ -1,0 +1,36 @@
+// Doctype declaration for HTML5
+doctype html
+
+html
+    head
+        // Meta tags for character set and responsive design
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        
+        // Title of the page, dynamically set from the 'title' variable
+        title #{title} | Online Shopping
+        
+        // Link to the external stylesheet
+        link(rel="stylesheet", href="/styles.css")
+
+    body 
+        // Header section containing the site name and navigation
+        header#header 
+            h2#site-name
+                // Site name with a link to the homepage
+                a(href="/") E-Cart
+
+            // Navigation menu
+            nav
+                ul
+                    li: a(href="/") Home 
+                    li: a(href="#").btn-disabled(title="Work in progress") About Us
+                    li: a(href="#").btn-disabled(title="Work in progress") Contact
+        
+        // Main content area where dynamic content will be inserted
+        main#main 
+            block layout-content // Placeholder for content injected from child templates
+
+        // Footer section containing the copyright notice
+        footer#footer 
+            p &copy; Copyright E-Cart, 2025

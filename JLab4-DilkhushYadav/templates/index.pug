@@ -1,0 +1,19 @@
+extends layout 
+
+block layout-content 
+
+    section.schema
+        h1 Movie List
+        div.movie-block
+            if movies.length > 0
+                ul.movie-list
+                    each movie in movies
+                        li 
+                            strong #{movie.title} 
+                                | (Released: #{movie.year}, Rating: #{movie.rating})
+                            a(href=`/update?title=${encodeURIComponent(movie.title)}&rating=${movie.rating}`).btn-info.ml-20 Update rating to R
+                
+                div.movie-footer
+                    a(href="/delete").btn-danger Deleted all movies with rating R
+            else 
+                p No movies found. Please initialize the database.

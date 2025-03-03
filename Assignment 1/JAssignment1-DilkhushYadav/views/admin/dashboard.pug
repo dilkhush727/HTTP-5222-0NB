@@ -1,0 +1,44 @@
+extends ../layout
+
+block content
+
+    // About section
+    section.section-border 
+        p A Full Stack Developer with 6 years of expertise in PHP and JavaScript development. Proficient in building scalable web applications across the full development lifecycle, with a focus on performance, optimization, and delivering clean, high-quality code for both front-end and back-end development.
+    
+    // Projects section
+    section.section-border 
+        h2 Projects
+            a(href="/admin/projects/add")
+                i.plus-icon +
+        // Check if there are any projects in the array
+        if projects.length
+            each project in projects
+                // Display project title
+                h3.mb-0: a(href=project.liveDemoLink target="_blank").block-title #{project.title}
+                // Display project description
+                p.mb-0= project.description
+                // Display project technologies
+                p
+                    strong Technologies:
+                    |   #{project.technologies}
+                
+        else
+            // If no projects exist, display a message
+            p No projects added yet.
+
+    // Skills section
+    section.section-border 
+        h2 Skills
+            a(href="/admin/skills/add")
+                i.plus-icon +
+        // Check if skills are categorized and available
+        if skillsByCategory && skillsByCategory.length
+            each category in skillsByCategory
+                p.mb-0
+                    strong #{category._id}: 
+                    each skill in category.skills
+                        |   #{skill.name}, 
+        else
+            // If no skills exist, display a message
+            p No skills added yet.

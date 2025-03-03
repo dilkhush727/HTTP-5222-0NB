@@ -1,0 +1,25 @@
+extends layout
+
+block layout-content 
+  // Page heading for adding a new menu link
+  h1 Add menu link 
+  
+  // Form to submit new menu link data (POST method)
+  form(method="post", action="/admin/menu/add/submit").menu-form
+    div 
+      // Label and input field for the weight of the link (numerical)
+      label(for="wgt") Weight: 
+      input(type="number", id="wgt", name="weight")
+    
+    div
+      // Label and input field for the URI of the link
+      label(for="href") URI: 
+      input(type="text", id="href", name="path", placeholder="e.g. /about")
+    
+    div
+      // Label and input field for the link's display text
+      label(for="link-name") Link text: 
+      input(type="text", id="link-name", name="name", placeholder="e.g. About")
+    
+    // Submit button for the form to add the new link
+    button(type="submit").btn-submit Add link

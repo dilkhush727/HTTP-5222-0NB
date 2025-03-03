@@ -1,0 +1,27 @@
+body {
+  font-family:'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background: #f3f3f3;
+  margin: 0;
+}
+
+header, main{
+  padding: 0 15px;
+}
+
+/* Table styles */
+table {
+  background: #fff;
+  min-width: 500px;
+  border-collapse: collapse;
+}
+
+table thead tr {
+  background: #e4e4e4;
+}
+
+/* Table cell padding and alignment */
+tr th, tr td {
+  padding: 5px;
+  text-align: left;
+  border: solid 1px #bcbcbc;
+}

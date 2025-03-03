@@ -1,0 +1,192 @@
+/* ==========================
+   General Styles
+   ========================== */
+
+   body {
+    font-family: 'Arial', sans-serif; /* Sets the font */
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* White background */
+    color: #002522; /* Dark text for readability */
+}
+
+/* Anchor tag */
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+/* Sticky Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #004e47;
+}
+
+.navbar-toggler{
+    background-color: #ffffffd4;
+}
+
+/* ==========================
+   Forms
+   ========================== */
+
+form {
+    background: #cfe7e4; /* Light gray background */
+    padding: 15px;
+    border: solid 1px #a5d4ce; /* Same color as background */
+    margin-bottom: 20px; /* Space below forms */
+}
+
+/* Form groups spacing */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Red asterisk for required fields */
+.form-group sup {
+    color: red;
+}
+
+/* Utility class for margin */
+.mr-10 {
+    margin-right: 10px;
+}
+
+/* ==========================
+   Navbar Styles
+   ========================== */
+
+/* Navbar links */
+.navbar a {
+    color: #fff; /* White text */
+    text-decoration: none; /* Remove underline */
+}
+.navbar a:hover {
+    color: #aeece6;
+}
+
+/* ==========================
+   Block Titles
+   ========================== */
+
+.block-title {
+    text-decoration: none;
+    color: #004e47; /* Orange text */
+    font-size: 24px;
+}
+
+/* Hover effect on block titles */
+.block-title:hover {
+    color: #002622; /* Darker orange */
+    transition: all 0.3s;
+}
+
+/* ==========================
+   Sections
+   ========================== */
+
+.section-border {
+    border-bottom: solid 2px #d4d4d4; /* Gray bottom border */
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+/* ==========================
+   Sidebar (Aside)
+   ========================== */
+
+.aside {
+    background-color: #cfe7e4; /* Light gray background */
+    display: flex; /* Align items in a row */
+    align-items: center;
+    gap: 10px; /* Space between elements */
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* Profile Image */
+.aside img {
+    width: 100px;
+}
+
+/* Sidebar Content */
+.aside-content {
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Sidebar Items */
+.aside-item {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/* Sidebar Item Background */
+.aside-item span {
+    background-color: #fff;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+/* Sidebar Links */
+.aside-item a {
+    color: #252525;
+    text-decoration: none;
+}
+
+/* Hover effect for sidebar links */
+.aside-item a:hover {
+    color: #737373;
+    transition: all 0.3s;
+}
+
+/* Add button */
+.plus-icon{
+    background: #cfe7e4;
+    padding: 0 7px 0px 5px;
+    border-radius: 25px;
+    font-size: 24px;
+    margin-left: 10px;
+    box-shadow: 0 0 3px 1px #6ca09a;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+/* Add button hover */
+.plus-icon:hover{
+    background: #bee0db;
+    box-shadow: 0 0 3px 1px #4d807a;
+    transition: all .3s;
+}
+
+/* ==========================
+   Responsive Styles
+   ========================== */
+
+@media screen and (min-width: 576px) {
+    .aside {
+        display: block;
+        min-height: calc(100vh - 56px); /* Full height minus navbar */
+    }
+
+    /* Sidebar content spacing */
+    .aside-content {
+        margin-top: 20px;
+    }
+
+    /* Larger font for sidebar items */
+    .aside-item {
+        font-size: 16px;
+    }
+
+    /* Ensure text overflow in sidebar items */
+    .aside-item span {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

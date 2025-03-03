@@ -1,0 +1,42 @@
+extends layout 
+
+block layout-content 
+
+    section.products
+        h1 Products 
+        .product-list
+            each product in products 
+                .product 
+                    // Product image
+                    img(src=product.imageUrl, alt=product.name)
+
+                    .product-details
+                        h3 
+                            // Product title linked to product page
+                            a(href=`/product/${product.id}`).product-title= product.name
+
+                        // Product description
+                        p= product.description 
+
+                        .price-block
+                            // Current price
+                            span.price= product.price 
+
+                            .price-old
+                                span Last price 
+                                // Old price if available
+                                span.price-text= product.price_old 
+
+                        .delivery 
+                            // Delivery info
+                            span.deliver-by Delivery by 
+                            span= product.delivery
+
+                        .stock 
+                            // Stock availability
+                            span.stock-available Only 
+                            span= product.stock
+                            span left in stock - order soon
+
+                        // Button to view product details
+                        a(href=`/product/${product.id}`).btn-primary View Details

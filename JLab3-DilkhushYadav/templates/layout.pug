@@ -1,0 +1,45 @@
+// Define the doctype for HTML5
+doctype html
+
+// Start of the HTML document
+html
+  head
+    // Define character encoding for the document
+    meta(charset="utf-8")
+    
+    // Define viewport settings for responsive design
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    
+    // Set the title dynamically based on the page title passed from server
+    title #{title} | My website
+
+    // Link to external stylesheet
+    link(rel="stylesheet", href="/styles.css")
+
+  body
+    // Header section for site branding
+    header#header
+      h2#site-name
+        // Link to the homepage of the site
+        a(href="/") Test website
+      nav
+        // Navigation menu
+        ul
+          // Loop through each menu link and create a list item
+          each link in menu
+            li
+              // Create anchor tags for each menu item
+              a(href=link.path) #{link.name}
+
+    // Main content section of the page
+    main#main
+      // Form for menu management, POST request to "/admin/menu"
+      form(action="/admin/menu").formmenu
+        // Button to submit the form
+        button(type="submit") Menu 
+      
+      // Placeholder for dynamic content, rendered in the layout
+      block layout-content
+
+    // Include footer from an external footer.pug file
+    include footer.pug

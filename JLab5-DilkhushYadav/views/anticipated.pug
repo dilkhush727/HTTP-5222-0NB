@@ -1,0 +1,16 @@
+extends layout 
+
+block main-content 
+    h1.page-title= title
+
+    table
+      thead
+        tr
+          th Show title
+          th Year
+      tbody
+        each aShow in shows
+            tr
+                td
+                    a(href=`https://imdb.com/title/${aShow.show.ids.imdb}`, target='_blank')= aShow.show.title
+                td= aShow.show.year

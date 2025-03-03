@@ -1,0 +1,38 @@
+extends layout
+
+block layout-content
+  // Heading for the page
+  h1 Administer menu links
+  
+  // Link to add a new menu link
+  a(href="/admin/menu/add").btnadd + Add new link
+  
+  // Table to display the existing menu links
+  table
+    thead
+      tr
+        // Column headers for the table
+        th Link
+        th(colspan=2) Operations
+    tbody
+      // Iterating through the menu array to display each link
+      each link in menu
+        tr
+          // Display the name and path of each link
+          td  #{link.name} (#{link.path})
+          
+          // Form for deleting a link
+          td
+            form(action="/admin/menu/delete" method="get")
+              // Hidden input to send the link's ID for deletion
+              input(type="hidden", name="linkId", value=link._id)
+              // Submit button to trigger deletion
+              button(type="submit").btn-act Delete
+          
+          // Form for editing a link
+          td
+            form(action="/admin/menu/edit" method="get")
+              // Hidden input to send the link's ID for editing
+              input(type="hidden", name="linkId", value=link._id)
+              // Submit button to trigger editing
+              button(type="submit").btn-act Edit

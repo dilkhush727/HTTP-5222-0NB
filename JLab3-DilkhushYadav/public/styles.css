@@ -1,0 +1,172 @@
+/* Reset margin, padding, and box-sizing for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic body styles */
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #000;
+    background: #f3f3f3;
+}
+
+/* Main content area styles */
+main {
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+/* Link styles */
+a {
+    text-decoration: none;
+}
+
+/* Header styles */
+header {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0px 0px 4px 2px #dedede;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Footer styles, fixed at the bottom */
+footer {
+    background: #ffffff;
+    padding: 5px 5px;
+    box-shadow: 0px 0px 4px 2px #dedede;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Form styles for menu-related actions */
+.formmenu {
+    padding: 10px 0;
+}
+
+.formmenu button {
+    background: #FFEB3B;
+    padding: 5px 10px;
+    border: solid 1px #eeda2b;
+    font-size: 16px;
+}
+
+/* Hover effects for form buttons */
+.formmenu button:hover {
+    background: #ffe609;
+    border: solid 1px #ebd40a;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* Add link button styles */
+.btnadd {
+    color: #006cc2;
+    display: inline-block;
+    padding: 2px 5px;
+    background: #efffdb;
+    border: solid 1px #dcf0c2;
+    margin: 5px 0 15px;
+}
+
+/* Hover effects for the add link button */
+.btnadd:hover {
+    color: #005497;
+    background: #e9ffcd;
+    border: solid 1px #d1f99d;
+}
+
+/* Table styles */
+table {
+    background: #fff;
+    min-width: 500px;
+}
+
+table thead tr {
+    background: #e4e4e4;
+}
+
+/* Table cell padding and alignment */
+tr th, tr td {
+    padding: 5px;
+    text-align: left;
+}
+
+/* Button styles for actions like Edit and Delete */
+.btn-act {
+    background: #84d9ff;
+    border: solid 1px #4ec8ff;
+    padding: 2px 6px;
+    display: flex;
+    cursor: pointer;
+}
+
+/* Hover effects for action buttons */
+.btn-act:hover {
+    background: #70cef8;
+    border: solid 1px #3ab8f1;
+    transition: all 0.3s;
+}
+
+/* Navigation menu styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #414141;
+}
+
+/* Hover effects for navigation links */
+nav ul li a:hover {
+    color: #000;
+}
+
+/* Form styles for adding menu links */
+.menu-form {
+    padding: 10px;
+    background: #fff;
+    width: 500px;
+}
+
+/* Spacing between form elements */
+.menu-form div {
+    margin-bottom: 15px;
+}
+
+/* Label styles for form fields */
+.menu-form label {
+    display: block;
+    margin-bottom: 2px;
+}
+
+/* Input field styles inside the menu form */
+.menu-form div input {
+    width: 100%;
+    padding: 5px;
+    border: solid 1px #d1d1d1;
+}
+
+/* Submit button styles for the menu form */
+.btn-submit {
+    background: #cfff98;
+    padding: 5px 10px;
+    border: solid 1px #ace46b;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Hover effects for the submit button */
+.btn-submit:hover {
+    background: #bcf37e;
+    border: solid 1px #96d44d;
+    transition: all 0.3s;
+}

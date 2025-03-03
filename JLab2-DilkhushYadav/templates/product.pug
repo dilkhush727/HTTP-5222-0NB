@@ -1,0 +1,42 @@
+extends layout
+
+block layout-content
+
+    // Section to display product details
+    section.products
+        h1 Product Details
+        
+        // Container for product's information
+        .product-details
+            .product
+                // Product image
+                img(src=product.imageUrl, alt=product.name)
+                
+                // Product details including name, description, and pricing
+                .product-details
+                    h3= product.name
+                    p= product.description
+
+                    // Price information including current and old price
+                    .price-block
+                        span.price= product.price
+                        
+                        .price-old
+                            span Last price 
+                            span.price-text= product.price_old
+                            
+                    // Delivery information
+                    .delivery
+                        span.deliver-by Delivery by 
+                        span= product.delivery
+
+                    // Stock information
+                    .stock
+                        span.stock-available Only
+                        span= product.stock
+                        span left in stock - order soon
+
+                    // Buttons for navigating back or adding to cart
+                    .btn-group
+                        a(href="/").btn-default Back to Home
+                        button.btn-primary.btn-disabled(title="'Add to Cart' feature is in progress.") Add to Cart

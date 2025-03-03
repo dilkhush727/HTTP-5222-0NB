@@ -1,0 +1,33 @@
+// Define the doctype for HTML5
+doctype html
+
+// Start of the HTML document
+html
+  head
+    // Define character encoding for the document
+    meta(charset="utf-8")
+    
+    // Define viewport settings for responsive design
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    
+    // Set the title dynamically based on the page title passed from server
+    title #{title} | Schema
+
+    // Link to external stylesheet
+    link(rel="stylesheet", href="/styles.css")
+
+  body
+    // Header section for site branding
+    header#header
+      h2#site-name
+        // Link to the homepage of the site
+        a(href="/") Movie Schema
+
+    // Main content section of the page
+    main#main
+      
+      // Placeholder for dynamic content, rendered in the layout
+      block layout-content
+
+    // Include footer from an external footer.pug file
+    include footer.pug

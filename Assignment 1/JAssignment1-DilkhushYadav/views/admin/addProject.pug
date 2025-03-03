@@ -1,0 +1,41 @@
+extends ../layout
+block content
+
+    // Page heading
+    h1 Add a New Project
+    
+    // Form to add a new project
+    form(action="/admin/projects/add" method="POST")
+        // Input field for project title
+        .form-group 
+            label(for="title") Title:
+                sup *
+            input(type="text" name="title" class="form-control" required)
+
+        // Textarea for project description
+        .form-group 
+            label(for="description") Description:
+                sup *
+            textarea(name="description" class="form-control" required)
+
+        // Input field for technologies (comma-separated)
+        .form-group 
+            label(for="technologies") Technologies (comma-separated):
+                sup *
+            input(type="text" name="technologies" class="form-control" required)
+
+        // Input field for Live Demo Link (optional)
+        .form-group 
+            label(for="liveDemoLink") Live Demo Link:
+            input(type="text" class="form-control" name="liveDemoLink")
+
+        // Input field for Image URL (optional)
+        .form-group 
+            label(for="image") Image URL:
+            input(type="text" class="form-control" name="image")
+
+        // Buttons for form actions (Submit and Cancel)
+        .form-group.text-center
+            a(href="/admin")
+                button(type="button").btn.btn-danger.mr-10 Cancel
+            button(type="submit").btn.btn-primary Submit

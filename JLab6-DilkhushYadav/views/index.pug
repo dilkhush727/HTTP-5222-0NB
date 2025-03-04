@@ -1,0 +1,14 @@
+extends layout  
+
+block main-content 
+  main
+    // Loop through the branches and render them
+    each branch in branches
+      .branch
+        // Display the branch name as a link to the branch's details page
+        h2
+          a(href=`/library/${branch.id}`)= branch.name
+        // Display the branch description
+        p= branch.description
+  // Link to external JavaScript file for dynamic behavior
+  script(src='/js/app.js')

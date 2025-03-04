@@ -1,0 +1,42 @@
+/* Body styling */
+body {
+    font-family:'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: #f3f3f3;
+    margin: 0;
+}
+
+/* Main content styling */
+main {
+    padding: 0px 30px 10px 30px;
+}
+
+/* Button styling for the back button */
+.btn-back {
+    text-decoration: none;
+    background: #83c8ff;
+    border: none;
+    padding: 10px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Button hover effect */
+.btn-back:hover {
+    background: #569dd6;
+}
+
+/* Branch card styling */
+.branch {
+    background-color: #ffffff;
+    padding: 5px 10px;
+    margin-bottom: 8px;
+}
+
+/* Heading styling */
+.heading {
+    position: sticky;
+    top: 0;
+    background: #cdcdcd;
+    padding: 10px;
+    margin-top: 0;
+}

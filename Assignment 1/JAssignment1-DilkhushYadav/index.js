@@ -22,8 +22,7 @@ app.use(express.static("public"));
 
 // Connect to MongoDB Atlas
 mongoose.connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+    serverSelectionTimeoutMS: 30000, // 30 seconds timeout to avoid immediate failure
 })
     .then(() => console.log("MongoDB Connected"))
     .catch(err => console.error("MongoDB Connection Error:", err));

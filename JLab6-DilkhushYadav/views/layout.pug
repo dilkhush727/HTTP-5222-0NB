@@ -1,0 +1,10 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title= title || branch.name
+    block scripts
+      link(rel="stylesheet", type="text/css", href="/style.css")
+  body
+    h1.heading Libraries
+    block main-content

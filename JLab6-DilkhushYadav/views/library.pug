@@ -1,0 +1,13 @@
+extends layout  
+
+block main-content 
+  main
+    // Display the branch name
+    h1= branch.name
+    // Display the branch address
+    p Address: #{branch.address}
+    // Display the branch phone number
+    p Phone: #{branch.phone}
+    // Button to go back to the library list
+    a(href='/')
+      button.btn-back Back to library list

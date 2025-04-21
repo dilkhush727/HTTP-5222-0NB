@@ -1,0 +1,24 @@
+{
+  "name": "vibesync",
+  "version": "1.0.0",
+  "description": "Suggests music playlists based on the user's mood",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./index.js",
+    "ui": "browser-sync start --config bs-config.js"
+  },
+  "author": "Dilkhush Yadav",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.8.4",
+    "dotenv": "^16.5.0",
+    "express": "^4.18.2",
+    "groq-sdk": "^0.5.0",
+    "jsdom": "^24.0.0",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.2",
+    "nodemon": "^3.0.3"
+  }
+}

@@ -62,6 +62,11 @@ router.post("/skills/add", async (req, res) => {
         res.status(500).send("Failed to add skill.");
     }
 });
+router.get("/skills/api", async (req, res) => {
+    const skills = await Skill.find();
+    
+    res.json(projects);
+});
 
 // Route to delete a project
 router.post("/projects/delete/:id", async (req, res) => {
@@ -73,7 +78,11 @@ router.post("/projects/delete/:id", async (req, res) => {
         res.status(500).send("Failed to delete project.");
     }
 });
-
+router.get("/projects/api", async (req, res) => {
+    const projects = await Project.find();
+    
+    res.json(projects);
+});
 // Route to delete a skill
 router.post("/skills/delete/:id", async (req, res) => {
     try {

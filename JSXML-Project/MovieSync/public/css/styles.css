@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playwrite+IS:wght@100..400&display=swap');
+
+:root {
+    --primary-color: #E1EBED;
+    --secondary-color: #291C3A;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font: 20px/normal "Josefin Sans", sans-serif;
+    margin: 0;
+    background-color: #000;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+ol, ul, li, p {
+    margin: 0;
+}
+
+#header {
+    background-color: #B7F1FC;
+}
+
+#header .navbar-brand {
+    color: #000;
+    font-weight: 700;
+    padding-left: 50px;
+}
+
+#header .navbar-brand img {
+    width: 100px;
+}
+
+#main-content {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+}
+
+#main-content #mood-form {
+    height: 400px;
+}
+
+.card:hover{
+    box-shadow: 0px 0px 17px 0px #ababab !important;
+    transition: all 0.3s;
+}
+
+#mood-form form {
+    margin-top: 5rem;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(19px);
+    -webkit-backdrop-filter: blur(19px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 50px;
+}
+
+#mood-form i {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mood-input {
+    max-height: 200px;
+}
+
+#mood-form .submit-btn {
+    font-size: 50px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spotify-frame {
+    width: 80%;
+    height: 400px;
+}
+
+#footer {
+    background-color: #B7F1FC;
+    padding: 1em;
+    text-align: center;
+}
+
+
+@media screen and (max-width:768px) {
+    body {
+        font-size: 18px;
+    }
+
+    #main-content {
+        background-position: center;
+    }
+
+    #mood-form form {
+        margin-top: 7rem;
+        padding: 30px;
+    }
+
+    #header .navbar-brand {
+        font-size: 40px;
+        padding-left: 30px;
+    }
+
+    #header .navbar-brand img {
+        width: 80px;
+    }
+
+    #mood-form .submit-btn {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width:576px) {
+    body {
+        font-size: 16px;
+    }
+
+    #header .navbar-brand {
+        font-size: 35px;
+        padding-left: 00px;
+    }
+
+    #header .navbar-brand img {
+        width: 70px;
+    }
+
+    #mood-form form {
+        padding: 15px;
+    }
+
+    .navbar-collapse{
+        margin-top: 10px;
+    }
+}
+  
+  .card-title {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  img {
+    border-radius: 8px;
+  }
+  
+  h2, h4 {
+    font-weight: 600;
+  }

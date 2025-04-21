@@ -1,0 +1,33 @@
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+}
+
+nav .nav-item{
+    font-weight: 600;
+}
+
+nav .nav-item:hover{
+    color: #6858d4;
+}
+
+header {
+    background-color: #333;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+header h1{
+    margin: 0;
+}
+
+header h1 a{
+    color: #6858d4;
+}

@@ -1,0 +1,30 @@
+.question {
+    background: white;
+    padding: 1rem;
+    margin: 2rem auto;
+    border: solid 1px #d8d8d8;
+}
+
+.category{
+    font-size: 14px;
+    color: #818181;
+    font-style: italic;
+}
+
+.btn-reveal{
+    background-color: #332d59;
+    color: #fff;
+    padding: 5px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-reveal:hover{
+    background-color: #151035;
+}
+
+.answer{
+    color: green;
+    margin-bottom: 10px;
+}

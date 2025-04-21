@@ -1,0 +1,16 @@
+extends common/layout.pug
+
+block main-content
+  h2.mb-3.text-danger Trending This Week
+
+  .row
+    each item in trending
+      .col-md-3.mb-4
+        a(href=`/details/${item.media_type}/${item.id}`)
+          .card.shadow-sm
+            if item.poster_path
+              img.card-img-top(src=`https://image.tmdb.org/t/p/w300${item.poster_path}`, alt=item.title || item.name)
+            else
+              img.card-img-top(src='/img/no-poster.png', alt='No poster available')
+            .card-body
+              h5.card-title= item.title || item.name

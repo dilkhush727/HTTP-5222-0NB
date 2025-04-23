@@ -1,5 +1,6 @@
 require("dotenv").config();
 const express = require("express");
+const cors = require("cors");
 const mongoose = require("mongoose");
 const path = require("path");
 
@@ -9,6 +10,9 @@ const adminRoutes = require("./routes/adminRoutes");
 // Initialize Express App
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// 🛡️ Enable CORS for all origins
+app.use(cors());
 
 // Middleware
 app.use(express.json());
